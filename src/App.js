@@ -90,6 +90,8 @@ function reducer(state, { type, payload }) {
         ...state,
         currentOperand: state.currentOperand.slice(0, -1)
       }
+    default:
+      break;
     }
 }
 
@@ -112,6 +114,8 @@ function evaluate({currentOperand, previousOperand, operation}) {
       break
     case "*":
       computation = prev * current
+      break
+    default:
       break
   }
 
